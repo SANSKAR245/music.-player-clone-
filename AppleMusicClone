@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #0f0f13;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #18181f;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .menu {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .menu li {
+      padding: 10px 0;
+      color: #ccc;
+      cursor: pointer;
+    }
+
+    .menu li:hover {
+      color: #fff;
+    }
+
+    .profile {
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .avatar {
+      width: 30px;
+      height: 30px;
+      background-color: #666;
+      border-radius: 50%;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .search-bar {
+      margin-bottom: 20px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 12px;
+      background-color: #1f1f27;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .card {
+      height: 100px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Category colors */
+    .pink { background: #ff4d94; }
+    .purple { background: #8b5cf6; }
+    .blue { background: #3b82f6; }
+    .orange { background: #fb923c; }
+    .yellow { background: #facc15; color: #000; }
+    .red { background: #ef4444; }
+    .green { background: #22c55e; }
+    .teal { background: #14b8a6; }
+    .violet { background: #a855f7; }
+    .gray { background: #6b7280; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <h2>MusicApp</h2>
+        <ul class="menu">
+          <li>🏠 Home</li>
+          <li>🆕 New</li>
+          <li>📻 Radio</li>
+        </ul>
+
+        <h3>Library</h3>
+        <ul class="menu">
+          <li>Recently Added</li>
+          <li>Artists</li>
+          <li>Albums</li>
+          <li>Songs</li>
+        </ul>
+
+        <h3>Playlists</h3>
+        <ul class="menu">
+          <li>All Playlists</li>
+          <li>Favourite Songs</li>
+        </ul>
+      </div>
+
+      <div class="profile">
+        <div class="avatar"></div>
+        <p>@username</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <div class="search-bar">
+        <input type="text" placeholder="Search Music..." />
+      </div>
+
+      <h2>Browse Categories</h2>
+      <div class="categories">
+        <div class="card pink">Pop</div>
+        <div class="card purple">Bollywood</div>
+        <div class="card blue">Apple Music Live</div>
+        <div class="card orange">Replay Monthly</div>
+        <div class="card yellow">Charts</div>
+        <div class="card red">Hip-Hop/Rap</div>
+        <div class="card green">Family</div>
+        <div class="card teal">Dance</div>
+        <div class="card violet">Romance</div>
+        <div class="card gray">Rock</div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
